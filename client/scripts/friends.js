@@ -1,9 +1,9 @@
 var Friends = {
   
-  toggleStatus: function(status) {
-    $('#chats').on('click', function(event) {
-      console.log(event.target.innerHTML);
-      
+  toggleStatus: function() {
+    $('#chats .username').on('click', function() {
+      // console.log(event.target.innerHTML);
+      // return true;
     });
   }
 

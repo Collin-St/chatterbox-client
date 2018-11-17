@@ -12,7 +12,7 @@ var MessagesView = {
   // }
   
   renderMessage: function(message) {
-    $('#chats').append('<div>' + message + '</div>');
+    $('#chats').append(MessageView.render());
   }
 
 };

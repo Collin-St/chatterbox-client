@@ -10,15 +10,20 @@ var RoomsView = {
       
     //   callback();
     // });
-    App.fetch(console.log);
+
   },
 
   // render: function() {
   // },
 
-  renderRoom: function(room) {
-    $('#rooms select').append('<option>' + room + '</option>');
-    // $('#rooms select').append('<option value='room'></option>');
+  renderRoom: function(roomName) {
+    $('#rooms button').on('click', function() {
+      $('#rooms select').append(Rooms.add());
+    
+    });
+    $('#rooms select').append('<option value=' + roomName + '></option>');
+    // $('#rooms select').append(Rooms.add());
+    
   }
 
 };
