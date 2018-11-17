@@ -20,6 +20,7 @@ var FormView = {
     // need to create object with HTMLInputElement.value
     
     Parse.create(messageObject);
+    // location.reload();
     // message needs to be an object
     
     // console.log('click!');

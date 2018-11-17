@@ -10,7 +10,23 @@ var RoomsView = {
       
     //   callback();
     // });
-
+  
+  var allRooms = [];
+  // console.log(Messages.results);
+  Messages.results.forEach(function (item) {
+    if (item.roomname && !allRooms.includes(item.roomname)) {
+      allRooms.push(item.roomname);
+    }
+  
+  // return allRooms;
+  });
+  console.log('allRooms:', allRooms);
+  
+  for (var i = 0; i < allRooms.length; i++) {
+    Rooms.add(allRooms[i]);
+    RoomsView.renderRoom(Rooms.add(allRooms[i]));
+  }
+  
   },
 
   // render: function() {
@@ -18,10 +34,10 @@ var RoomsView = {
 
   renderRoom: function(roomName) {
     $('#rooms button').on('click', function() {
-      $('#rooms select').append(Rooms.add());
+      $('#rooms select').append(roomName);
     
     });
-    $('#rooms select').append('<option value=' + roomName + '></option>');
+    // $('#rooms select').append('<option value=' + roomName + '></option>');
     // $('#rooms select').append(Rooms.add());
     
   }

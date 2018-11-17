@@ -8,10 +8,13 @@ var MessagesView = {
         // MessageView.render
     var feed = Messages.results;
     Messages.results.forEach(function(item) {
-      console.log(item);
+      if (item.username) {
+        MessagesView.renderMessage(item);
+      }
+      // console.log("item:", item);
       // var html = '';
       // html += 
-      MessagesView.renderMessage(item);
+      
     })
   },
 
@@ -21,6 +24,8 @@ var MessagesView = {
   // }
   
   renderMessage: function(message) {
+    // console.log(message);
+    // console.log('username: ', message.username);
     $('#chats').append(MessageView.render(message));
   }
 

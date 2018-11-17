@@ -8,10 +8,13 @@ var App = {
     App.username = window.location.search.substr(10);
     App.startSpinner();
     App.fetch(MessagesView.initialize);
+    App.fetch(RoomsView.initialize);
     FormView.initialize();
-    RoomsView.initialize();
+    // RoomsView.initialize();
     
     App.stopSpinner();
+    
+    // console.log('getRooms: ', getRooms(Messages))
 
     // Fetch initial batch of messages
     // App.startSpinner();

@@ -27,7 +27,7 @@
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room: 
-        <select></select>
+        <select> <option>test</option></select>
         <button>Add Room</button>
       </div>
       <form action="#" id="send" method="post">
@@ -48,7 +48,12 @@
     <script src="client/scripts/messagesView.js"></script>
     <script src="client/scripts/app.js"></script>
     <script>
-      $(() => App.initialize());
+      $(document).ready(function() {
+        $(() => App.initialize());
+          // setInterval(App.fetch, 5000);
+          // setInterval(MessagesView.initialize, 5000);
+        });
+      
     </script>
   </body>
 </html>

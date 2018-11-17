@@ -4,10 +4,10 @@ var MessageView = {
   render: _.template(`
      <div class="chat">
         <div class="username" onclick="Friends.toggleStatus()">
-        <%= username %>
+        <%- username %>
         </div>
         <div>
-        <%= text %>
+        <%- text %>
         </div>
       </div>
     `)

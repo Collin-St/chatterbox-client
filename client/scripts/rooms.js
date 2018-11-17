@@ -1,7 +1,10 @@
 var Rooms = {
+  
+  // allRooms: [];
 
 add: _.template(`
-     <option></option>
+     <option><%- value= %>
+     </option>
           `)
   // $('#rooms select').append('<option value='room'></option>');
   // $('#rooms select')
