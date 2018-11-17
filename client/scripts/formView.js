@@ -8,12 +8,21 @@ var FormView = {
 
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
-    // event.preventDefault();
+    event.preventDefault();
     // on click, Submit should send messages to the server
-
-    Parse.create();
+    var newMessage = document.getElementById("message").value;
+    console.log('test:', newMessage);
+    var messageObject = {
+      username: App.username,
+      roomname: 'something',
+      text: newMessage,
+    }
+    // need to create object with HTMLInputElement.value
     
-    console.log('click!');
+    Parse.create(messageObject);
+    // message needs to be an object
+    
+    // console.log('click!');
   },
 
   setStatus: function(active) {
@@ -22,3 +31,9 @@ var FormView = {
   }
 
 };
+
+// {
+//       username: 'collin and Paul',
+//       roomname: 'Collin and paul room',
+//       text: 'Welcome to our room',
+//     }
