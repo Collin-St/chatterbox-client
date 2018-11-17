@@ -6,14 +6,16 @@ var App = {
 
   initialize: function() {
     App.username = window.location.search.substr(10);
-
+    App.startSpinner();
+    App.fetch(MessagesView.initialize);
     FormView.initialize();
     RoomsView.initialize();
-    MessagesView.initialize();
+    
+    App.stopSpinner();
 
     // Fetch initial batch of messages
-    App.startSpinner();
-    App.fetch(App.stopSpinner);
+    // App.startSpinner();
+    // App.fetch(App.stopSpinner);
 
   },
 
@@ -21,9 +23,9 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
-      
-      
+      Messages = data;
       callback();
+      
     });
   },
 

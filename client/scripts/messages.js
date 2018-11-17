@@ -1,8 +1,7 @@
-
 var Messages = {
-  // username:
-   // username: ,
-  // text: ,
-  // roomname:
+  //username:
+  //text:
+  //roomName:
+  //dateCreated:
   
 };

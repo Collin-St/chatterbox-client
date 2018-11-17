@@ -3,7 +3,16 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
-    
+    //loop
+      // for each
+        // MessageView.render
+    var feed = Messages.results;
+    Messages.results.forEach(function(item) {
+      console.log(item);
+      // var html = '';
+      // html += 
+      MessagesView.renderMessage(item);
+    })
   },
 
   // render: function(message) {
@@ -12,7 +21,7 @@ var MessagesView = {
   // }
   
   renderMessage: function(message) {
-    $('#chats').append(MessageView.render());
+    $('#chats').append(MessageView.render(message));
   }
 
 };
